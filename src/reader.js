@@ -16,7 +16,7 @@ sockserver.on('connection', (ws) => {
     // console.log('WebSocket client connected');
     ws.on('message', (message) => {
         sockserver.clients.forEach( c => {
-            // console.log(`distributing message: ${message}`)
+            console.log(`distributing message: ${message}`)
             c.send(`${message}`);
         })
         // console.log('Received:', message);
